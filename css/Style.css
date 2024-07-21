@@ -1,4 +1,4 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -6,19 +6,23 @@
     text-decoration: none;
     list-style: none;
 }
-:root{
-    --text-color:#000000;
-    --bg-color:#e5e5e5;
-    --main-color:#f29494;
-    --second-color:#fff;
-    --big-font:5.5rem;
-    --p-font:1rem
+
+:root {
+    --text-color: #000000;
+    --bg-color: #e5e5e5;
+    --main-color: #f29494;
+    --second-color: #fff;
+    --other-color: #868686;
+    --big-font: 5.5rem;
+    --p-font: 1rem
 }
-body{
-    background:var(--bg-color) ;
+
+body {
+    background: var(--bg-color);
     color: var(--text-color);
 }
-header{
+
+header {
     position: fixed;
     top: 0;
     right: 0;
@@ -30,40 +34,48 @@ header{
     padding: 27px 9%;
     transition: all ease .50s;
 }
-.logo{
+
+.logo {
     display: flex;
     align-items: center;
     color: var(--text-color);
     font-size: 40px;
     font-weight: bold;
 }
-.logo i{
+
+.logo i {
     vertical-align: middle;
     color: var(--main-color);
     font-size: 35px;
     margin-right: 5px;
 }
-.navlist{
+
+.navlist {
     display: flex;
 }
-.navlist a{
+
+.navlist a {
     font-size: var(--p-font);
     color: var(--text-color);
     font-weight: 600;
     margin: 0 35px;
-    transition: all ease .50s;   
+    transition: all ease .50s;
 }
-.navlist a:hover{
+
+.navlist a:hover {
     color: var(--main-color);
 }
-.navlist a.active{
+
+.navlist a.active {
     color: var(--main-color);
 }
-.h-main{
+
+.h-main {
     display: flex;
     align-items: center;
 }
-.h-btn{
+
+.h-btn {
     display: inline-block;
     padding: 10px 25px;
     color: var(--bg-color);
@@ -73,14 +85,16 @@ header{
     border-radius: 5px;
     border: 2px solid var(--main-color);
     margin-right: 20px;
-    transition: all ease .50s;   
+    transition: all ease .50s;
 }
-.h-btn:hover{
+
+.h-btn:hover {
     background: transparent;
     border: 2px solid var(--text-color);
     color: var(--text-color);
 }
-#menu-icon{
+
+#menu-icon {
     font-size: 40px;
     color: var(--text-color);
     z-index: 10001;
@@ -88,10 +102,110 @@ header{
     margin: 15px;
     display: none;
 }
-#darkmode{
+
+#darkmode {
     font-size: 30px;
     cursor: pointer;
     color: var(--text-color);
     margin-left: 10px;
 }
- 
+
+section {
+    padding: 0 12%;
+}
+
+.main {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 1rem;
+}
+
+.main-img {
+    width: 800px;
+    height: 800px;
+}
+
+.main-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.main-in {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+}
+
+.main-text h1 {
+    font-size: var(--big-font);
+    line-height: 1.3;
+    font-weight: 800;
+}
+
+.main-text h4 {
+    margin: 5px 0 20px;
+    color: var(--main-color);
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.main-text p {
+    color: var(--other-color);
+    font-size: var(--p-font);
+    font-weight: 500;
+    max-width: 550px;
+    margin-bottom: 4rem;
+}
+.box{
+    background: var(--second-color);
+    padding: 25px 40px;
+    border-radius: 1rem;
+    box-shadow: rgba(35, 35, 38,0.1) 0px 10px 10px -10px;
+    transition: all ease .50s;
+    cursor: pointer;
+}
+.box img{
+    max-width: 100%;
+    height: auto;
+}
+.box h3{
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+.box h5{
+     color: var(--main-color);
+     font-size: 15px;
+     font-weight: 400;
+     letter-spacing: 4px;
+}
+.box:hover{
+    transform: translateY(-5px) scale(1.1);
+}
+.down-arrow{
+    position: absolute;
+    bottom: 3.5rem;
+    right: 9%;
+}
+.down-arrow i{
+    padding: 14px;
+    color: var(--bg-color);
+    background:var(--text-color);
+    font-size: 25px;
+    border-radius: 3rem;
+    cursor: pointer;
+    transition: all ease .50s;
+}
+.down-arrow i:hover{
+    background: var(--main-color);
+    transform: translateY(5px);
+}
