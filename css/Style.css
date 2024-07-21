@@ -209,3 +209,8 @@ section {
     background: var(--main-color);
     transform: translateY(5px);
 }
+body.color{
+--text-color:#fff;
+--bg-color:#08162a;
+--second-color:#2b3544;
+}
